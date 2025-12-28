@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SLA Transport Company – Blue Metal, Gravel & Tipper Services (Tamil Nadu)</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; }
+
+    /* Corporate Blue & White + Gold Accent Theme */
+    :root {
+      /* DARK MODE — Royal Blue + Gold */
+      --bg: #0b1220;
+      --text: #e5eaf5;
+      --card: #0f172a;
+      --card-border: #1e3a8a;
+      --header-grad: linear-gradient(135deg,#020617,#0f1b3d,#1e3a8a);
+      --section-grad: linear-gradient(180deg,#0b1220,#0f172a,#0b1220);
+      --brand-1:#2563eb; /* royal blue */
+      --brand-2:#1e40af; /* deep navy blue */
+      --gold-1:#facc15; /* gold accent */
+      --gold-2:#eab308;
+    }
+
+    body.light {
+      /* LIGHT MODE — Clean White + Blue + Gold */
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --card: #ffffff;
+      --card-border: #e2e8f0;
+      --header-grad: linear-gradient(135deg,#eff6ff,#dbeafe,#bfdbfe);
+      --section-grad: linear-gradient(180deg,#ffffff,#f1f5ff);
+      --brand-1:#1d4ed8;
+      --brand-2:#2563eb;
+      --gold-1:#facc15;
+      --gold-2:#eab308;
+    }
+
+    body { margin: 0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color: var(--text); background: var(--bg); transition: .35s background,.35s color; }
+
+    header { position:static; background: var(--header-grad); color:#f8fafc; margin:0; padding: 8px 20px 20px; border-bottom:3px solid var(--gold-1); transition:.35s, padding .25s; }
+    body.light header { color:#000000; }
+    body.light header { color:#000000; }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+    .grid { display: grid; gap: 22px; }
+
+    .hero-title { font-size: 2.1rem; font-weight: 900; margin: 6px 0 4px; letter-spacing:.05px; line-height:1.12; color:#ffffff; }
+    .hero-title span{ font-weight:700; }
+    body.light .hero-title { color:#000000; }
+
+    .hero-sub { font-size: 1.1rem; opacity: .9; }
+    body.light .hero-sub { color:#000000; opacity:.9; }
+
+    /* Theme Toggle — Blue + Gold Edge */
+    .theme-toggle { margin-left:auto; padding:8px 14px; border-radius:999px; border:1px solid var(--gold-2); background:linear-gradient(135deg,var(--brand-1),var(--brand-2)); color:#ffffff; cursor:pointer; font-weight:800; display:flex; align-items:center; gap:8px; }
+    body.light .theme-toggle{ border-color:#cbd5e1; }
+
+    /* Buttons */
+    .btn { display:inline-block; padding:12px 18px; border-radius:999px; text-decoration:none; font-weight:700; box-shadow:0 14px 28px rgba(0,0,0,.25); transition:.25s; }
+    .btn-primary { background: linear-gradient(135deg,var(--brand-1),var(--brand-2)); color:#f8fafc; border:2px solid var(--gold-1); }
+    .btn-outline { border:2px solid var(--brand-1); color:var(--text); background:transparent; }
+    body.light .btn-outline{ color:#0f172a; }
+    .btn:hover{ transform:translateY(-2px) scale(1.02); }
+
+    section { padding:56px 20px; background:var(--section-grad); transition:.35s; }
+    h2 { margin:0 0 20px; font-size:1.9rem; font-weight:900; color:#ffffff; border-left:6px solid var(--gold-1); padding-left:10px; }
+    body.light h2 { color:#0f172a; }
+
+    /* Corporate Cards */
+    .card { background: var(--card); border-radius:18px; padding:22px; box-shadow:0 24px 50px rgba(0,0,0,.35); border:1px solid var(--card-border); transition:.25s; }
+    body.light .card{ box-shadow:0 12px 30px rgba(0,0,0,.08); }
+    .card:hover{ transform:translateY(-3px); border-color:var(--gold-1); }
+
+    /* Blue + Gold Badges */
+    .badge { display:inline-block; padding:6px 12px; border-radius:999px; font-size:.8rem; font-weight:800; letter-spacing:.4px; background:var(--brand-1); color:#ffffff; border:1px solid var(--gold-1); }
+    .badge:nth-of-type(2){ background:var(--brand-2); }
+    .badge:nth-of-type(3){ background:#60a5fa; color:#0f172a; border-color:var(--gold-1); }
+    .badge:nth-of-type(4){ background:#bfdbfe; color:#0f172a; border-color:var(--gold-1); }
+    .badge:nth-of-type(5){ background:#93c5fd; color:#0f172a; border-color:var(--gold-1); }
+
+    .products-grid { grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; position:static; background:var(--header-grad); padding:4px 8px; border-bottom:2px solid var(--gold-1); box-shadow:none; }
+    .nav strong{ font-size:1.6rem; font-weight:900; letter-spacing:.15px; color:var(--brand-1); border-bottom:3px solid var(--gold-1); padding-bottom:1px; white-space:nowrap; margin-top:-4px; }
+
+    .footer { background:linear-gradient(135deg,#020617,#0b1220,#0f172a); color:#e5e7eb; padding:44px 20px; border-top:3px solid var(--gold-1); }
+    body.light .footer{ background:#dbeafe; color:#0f172a; }
+
+    @media(min-width: 768px){
+    .hero-title{font-size:3rem;}
+    header{padding:0 20px 48px;}
+  } header{padding:96px 20px;} }
+  .site-header{display:flex;align-items:center;justify-content:space-between;padding:6px 0 14px;border-bottom:1px solid var(--card-border);} .brand-wrap{display:flex;align-items:center;gap:10px;} .brand-logo{font-size:2.2rem;color:var(--brand-1);} .brand-text strong{font-size:1.8rem;font-weight:900;font-family:"Times New Roman",Georgia,"Playfair Display",serif;} .contact-wrap{display:flex;gap:16px;font-weight:700;color:var(--text);} .primary-nav{display:flex;gap:22px;align-items:center;justify-content:center;padding:10px 0;border-bottom:1px solid var(--card-border);} .primary-nav .nav-link{text-decoration:none;font-weight:700;color:var(--text);} .primary-nav .nav-link:not(:last-of-type){padding-right:16px;border-right:1px solid var(--card-border);} .header-menu{ display:flex; gap:18px; flex-wrap:wrap; margin-left:auto; }
+  .header-menu .nav-link{ text-decoration:none; font-weight:800; text-transform:uppercase; letter-spacing:.5px; color:var(--text); border:2px solid transparent; padding:4px 8px; border-radius:8px; }
+  .header-menu .nav-link:hover{ border-color:var(--brand-1); background:linear-gradient(135deg,var(--brand-1),var(--brand-2)); color:#ffffff; }
+  .section-head{display:flex;align-items:center;gap:14px;margin-bottom:10px;} .section-pill{background:var(--gold-1);color:#0f172a;font-weight:900;border-radius:999px;padding:6px 12px;font-size:.8rem;letter-spacing:.4px;} .section-head h2{margin:0;} /* Section Banner Backgrounds */
+  #about{ background: linear-gradient(180deg,#eef2ff,#ffffff); }
+  #products{ background: linear-gradient(180deg,#f0f9ff,#ffffff); }
+  #services{ background: linear-gradient(180deg,#fefce8,#ffffff); }
+  #contact{ background: linear-gradient(180deg,#fff7ed,#ffffff); }
+
+  .section-pill{ display:inline-flex; align-items:center; gap:6px; }
+/* Compact NAV on scroll */
+  .nav{}
+  .nav strong{}
+  .header-menu .nav-link{}, .theme-toggle{}
+
+  .nav.compact{ padding:4px 8px; }
+  .nav.compact strong{ font-size:1.3rem; letter-spacing:.1px; }
+  .nav.compact .header-menu .nav-link{ padding:2px 6px; font-size:.75rem; }
+  .nav.compact .theme-toggle{ padding:4px 8px; gap:4px; font-size:.75rem; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <strong>SLA Transport Company</strong>
+        <nav class="header-menu">
+          <a href="#about" class="nav-link">About Us</a>
+          <a href="#products" class="nav-link">Products</a>
+          <a href="#services" class="nav-link">Our Services</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <button id="themeBtn" class="theme-toggle"><span id="themeIcon">🌙</span><span id="themeLabel">Dark</span></button>
+      </div>
+      <h1 class="hero-title">Quality Blue Metal, Gravel & Professional Tipper Services<br><span style="font-size:1.2rem;font-weight:600;opacity:.9;display:block;margin-top:6px;">உயர் தரமான ப்ளூ மெட்டல், க்ராவல் மற்றும் டிப்பர் சேவைகள்</span></h1>
+      <p class="hero-sub">Trusted supplier for construction, road work and infrastructure projects across Tamil Nadu.<br>தமிழக முழுவதும் கட்டுமானம், சாலைப்பணி மற்றும் அடிக்கட்டு திட்டங்களுக்கு நம்பகமான பொருள் வழங்குநர்.</p>
+      <p style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="#contact" class="btn btn-primary">Get a Quote</a>
+        <a href="#services" class="btn btn-outline">Our Services</a>
+      </p>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container grid">
+      <div class="section-head"><span class="section-pill">🏢 About Us</span></div>
+      <div class="card">
+        <span class="badge">About / Company</span>
+        <p>SLA Transport Company is a reliable material supplier and logistics partner specializing in <strong>blue metal aggregates</strong>, <strong>gravel</strong>, and <strong>tipper transport services</strong>. We support builders, contractors, industries and government projects with timely delivery and consistent material quality.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="container">
+      <div class="section-head"><span class="section-pill">🏗 Products</span></div>
+      <div class="grid products-grid">
+        <div class="card">
+          <span class="badge">Blue Metal</span>
+          <h3>Blue Metal (6mm / 12mm / 20mm / 40mm)</h3>
+          <p>Crushed stone aggregates suitable for concrete, road base and construction work. Available in multiple sizes based on project needs.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Gravel</span>
+          <h3>Gravel</h3>
+          <p>High-grade gravel for filling, foundation layers, road work and drainage applications with dependable supply capacity.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Wet Mix / GSB Wet Mix</span>
+          <h3>Wet Mix / GSB Wet Mix (WBM-Related)</h3>
+          <p>Combined Wet Mix Macadam and Granular Sub Base (GSB) material suitable for WBM-related road base and pavement layers, supplied with reliable transport support.</p>
+        </div>
+        <div class="card">
+          <span class="badge">GSB (Dust Mix)</span>
+          <h3>GSB – Dust Mix</h3>
+          <p>Granular Sub Base Dust Mix material used for sub‑grade strengthening, shoulder construction and WBM preparation layers in road projects.</p>
+        </div>
+        <div class="card">
+          <span class="badge">GSB (Sand Mix)</span>
+          <h3>GSB – Sand Mix</h3>
+          <p>Granular Sub Base Sand Mix providing improved drainage and base stability for highways, rural roads and infrastructure foundations.</p>
+        </div>
+        <div class="card">
+          <span class="badge">RR Stone</span>
+          <h3>RR (Railway Rubble / Rubble Rock)</h3>
+          <p>Rubble stones suitable for retaining walls, foundation protection, revetments, embankment support and heavy‑duty civil works.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Quarry Dust</span>
+          <h3>Quarry Dust – Construction Uses</h3>
+          <p>Finely crushed quarry dust used for block work, paving bed preparation, interlocking pavers, filling, sub‑base layers and as a partial sand replacement in construction.</p>
+        </div>
+        <div class="card">
+          <span class="badge">M‑Sand / P‑Sand</span>
+          <h3>Manufactured Sand</h3>
+          <p>Consistent, high‑strength sand for plastering and concrete applications (available on request).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head"><span class="section-pill">🚚 Our Services</span></div>
+      <div class="grid products-grid">
+        <div class="card">
+          <span class="badge">Logistics Service</span>
+          <h3>Tipper & Bulk Transport</h3>
+          <p>Fleet of well‑maintained tippers for bulk delivery of aggregates and construction materials across Tamil Nadu.</p>
+          <p><strong>Available Fleet:</strong> 2, 4, 7, 9, 10 & 13‑unit tippers suitable for small, medium and large‑scale project logistics.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Industrial Transport</span>
+          <h3>Specialized Material Transport</h3>
+          <p>Dedicated transport support for industrial, mining and heavy‑duty applications.</p>
+          <ul>
+            <li>Limestone transport</li>
+            <li>Quarry heavy boulders</li>
+            <li>Mines fire‑clay material</li>
+            <li>Cement kiln / clinker related material movement</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="badge">Contract Supply</span>
+          <h3>Project Supply Contracts</h3>
+          <p>Long‑term supply partnerships for builders, contractors and infrastructure projects with assured logistics support.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Dispatch & Scheduling</span>
+          <h3>On‑Time Delivery</h3>
+          <p>Efficient dispatch management and site‑ready delivery scheduling to keep your projects on track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head"><span class="section-pill">📞 Contact</span></div>
+      <div class="card">
+        <span class="badge">Contact Details</span>
+        <p><strong>SLA Transport Company – Tamil Nadu</strong><br>
+        <strong>Ajith Kumar S</strong></p>
+        <p><strong>Phone / தொலைபேசி:</strong> +91 7639045289<br>
+           <strong>Email / மின்னஞ்சல்:</strong> info@slatransport.in<br>
+           <strong>Address / முகவரி:</strong> Ariyalur, Tamil Nadu, India</p>
+        <p>For material supply and tipper services, please contact us directly by phone or email.<br>பொருட்கள் விநியோகம் மற்றும் டிப்பர் சேவைகளுக்காக தொலைபேசி அல்லது மின்னஞ்சல் மூலம் நேரடியாக தொடர்பு கொள்ளவும்.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>SLA Transport Company</strong> — Blue Metal, Gravel & Tipper Services • Tamil Nadu</p>
+      <p>© <span id="year"></span> SLA Transport Company. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  const btn=document.getElementById('themeBtn');
+  const icon=document.getElementById('themeIcon');
+  const label=document.getElementById('themeLabel');
+  const saved=localStorage.getItem('sla-theme');
+  function applyState(){
+    const light=document.body.classList.contains('light');
+    icon.textContent = light ? '🌞' : '🌙';
+    label.textContent = light ? 'Light' : 'Dark';
+  }
+  if(saved==='light'){ document.body.classList.add('light'); }
+  applyState();
+  btn.addEventListener('click',()=>{
+    document.body.classList.toggle('light');
+    const light=document.body.classList.contains('light');
+    localStorage.setItem('sla-theme', light ? 'light' : 'dark');
+    applyState();
+  });
+</script>
+
+</body>
+</html>
